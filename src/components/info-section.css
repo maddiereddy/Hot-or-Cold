@@ -1,12 +1,3 @@
-/* Create a highlight keyframe */
-@keyframes section-highlight {
-  0% {
-    background: #9b1228;
-  }
-  100% {
-    background: none;
-  }
-}
 
 ol {
   margin-bottom: 1rem;
@@ -22,4 +13,14 @@ ol {
 
 #what:target {
   animation: section-highlight 3s;
+}
+
+button {
+  font-size: 1em;
+}
+
+button:hover,
+button:focus {
+  background: #e64c65;
+  cursor: pointer;
 }

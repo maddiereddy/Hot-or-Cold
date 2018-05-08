@@ -6,14 +6,13 @@ export default function TopNav(props) {
     <nav>
       <ul className="clearfix">
         <li>
-          <a href="#what" className="what" aria-label="How to play">
-            What?
+          <a href="#what" className="what" aria-label="How to play"
+            onClick={() => props.onShowInfo()}> What?
           </a>
         </li>
         <li>
           <a href="#restart" className="new" aria-label="Start a new game" 
-          	onClick={() => props.onRestartGame()}>
-            + New Game
+          	onClick={() => props.onRestartGame()}> + New Game
           </a>
         </li>
       </ul>
