@@ -53,7 +53,7 @@ export default class Game extends React.Component {
       feedback = 'You\'re Cold...';
     } else if (difference >= 10) {
       feedback = 'You\'re Warm.';
-    } else if (difference >= 5) {
+    } else if (difference >= 3) {
       feedback = 'You\'re Hot!';
     } else if (difference >= 1) {
       feedback = 'You\'re Burnin!';
@@ -70,7 +70,6 @@ export default class Game extends React.Component {
 
 	render() {
 		const { feedback, guesses, showInfo } = this.state;
-    const guessCount = guesses.length;
 
     if (!showInfo) {
       return (
@@ -80,8 +79,7 @@ export default class Game extends React.Component {
             onShowInfo={() => this.showInfoWhat()}
           />
           <main role="main">
-            <GuessSection feedback={feedback} guessCount={guessCount}
-              onMakeGuess={guess => this.makeGuess(guess)} />
+            <GuessSection feedback={feedback} onMakeGuess={guess => this.makeGuess(guess)} />
             <StatusSection guesses={guesses} />
           </main>
         </div>
